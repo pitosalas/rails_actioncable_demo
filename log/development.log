@@ -7023,3 +7023,112 @@ MessagesChannel is streaming from messages
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8684713016202850305)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (8.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8684713016202850305);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (24.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (21.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8684713016202850305)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mHome Load (6.7ms)[0m  [1m[34mSELECT "homes".* FROM "homes"[0m
+Started GET "/" for 127.0.0.1 at 2017-03-28 16:48:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /Users/pitosalas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/pitosalas/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-5.0.2/lib/rails/templates/rails/welcome/index.html.erb (6.0ms)
+Completed 200 OK in 26ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/homes/1" for 127.0.0.1 at 2017-03-28 16:48:21 -0400
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (6.8ms)[0m  [1m[34mSELECT  "homes".* FROM "homes" WHERE "homes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/_home_form.html.erb (21.4ms)
+  Rendered homes/show.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 515ms (Views: 482.5ms | ActiveRecord: 16.5ms)
+
+
+Started GET "/cable" for ::1 at 2017-03-28 16:48:22 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:22 -0400
+Request origin not allowed: http://0.0.0.0:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:22 -0400
+Started GET "/cable" for ::1 at 2017-03-28 16:48:22 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:22 -0400
+Request origin not allowed: http://0.0.0.0:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:22 -0400
+Started GET "/cable" for ::1 at 2017-03-28 16:48:28 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:28 -0400
+Request origin not allowed: http://0.0.0.0:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:28 -0400
+Started GET "/cable" for ::1 at 2017-03-28 16:48:31 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:31 -0400
+Request origin not allowed: http://0.0.0.0:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:31 -0400
+Started GET "/cable" for ::1 at 2017-03-28 16:48:37 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:37 -0400
+Request origin not allowed: http://0.0.0.0:3000
+Failed to upgrade to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Finished "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:37 -0400
+Started GET "/homes/1" for ::1 at 2017-03-28 16:48:38 -0400
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.4ms)[0m  [1m[34mSELECT  "homes".* FROM "homes" WHERE "homes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/_home_form.html.erb (1.9ms)
+  Rendered homes/show.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/cable" for ::1 at 2017-03-28 16:48:39 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2017-03-28 16:48:39 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started PATCH "/homes/1" for ::1 at 2017-03-28 16:49:08 -0400
+Processing by HomesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z79eLwwvgezzMuDfns+ryzI3tD204V/XkM/+N16yR6WBijVJdT5WKFVJVslE+eh1/4f3vMTkrwFFBQvxaNLmyQ==", "home"=>{"message"=>"what hello", "home_id"=>"1"}, "commit"=>"share with collaborators", "id"=>"1"}
+  [1m[36mHome Load (0.4ms)[0m  [1m[34mSELECT  "homes".* FROM "homes" WHERE "homes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.2ms)[0m  [1m[33mUPDATE "homes" SET "message" = $1, "updated_at" = $2 WHERE "homes"."id" = $3[0m  [["message", "what hello"], ["updated_at", 2017-03-28 20:49:08 UTC], ["id", 1]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+[ActionCable] Broadcasting to messages: {:message=>"what hello"}
+Completed 200 OK in 28ms (ActiveRecord: 21.6ms)
+
+
+MessagesChannel transmitting {"message"=>"what hello"} (via streamed from messages)
+Started GET "/homes/1" for ::1 at 2017-03-28 16:49:25 -0400
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.9ms)[0m  [1m[34mSELECT  "homes".* FROM "homes" WHERE "homes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering homes/show.html.erb within layouts/application
+  Rendered homes/_home_form.html.erb (1.8ms)
+  Rendered homes/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 121ms (Views: 117.0ms | ActiveRecord: 0.9ms)
+
+
+Finished "/cable/" [WebSocket] for ::1 at 2017-03-28 16:49:25 -0400
+MessagesChannel stopped streaming from messages
+Started GET "/cable" for ::1 at 2017-03-28 16:49:26 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2017-03-28 16:49:26 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages
+Started PATCH "/homes/1" for ::1 at 2017-03-28 16:49:28 -0400
+Processing by HomesController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bN8b19Ci42yiSzx5KqRkBeMk+3KCBi8S1sYf1N4AAhYi6nCxqbM0qAQwim/wkie7LpS48/ID38QDDOoS6GCjeg==", "home"=>{"message"=>"what hello", "home_id"=>"1"}, "commit"=>"share with collaborators", "id"=>"1"}
+  [1m[36mHome Load (0.5ms)[0m  [1m[34mSELECT  "homes".* FROM "homes" WHERE "homes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+[ActionCable] Broadcasting to messages: {:message=>"what hello"}
+Completed 200 OK in 4ms (ActiveRecord: 0.7ms)
+
+
+MessagesChannel transmitting {"message"=>"what hello"} (via streamed from messages)
+Finished "/cable/" [WebSocket] for ::1 at 2017-03-28 16:50:34 -0400
+MessagesChannel stopped streaming from messages
